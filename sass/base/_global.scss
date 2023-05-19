@@ -1,0 +1,44 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+/*---------- Global ---------*/
+@font-face {
+    font-family: "fuentePagina";
+    src: url(/fuentes/Designer.otf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    overflow-x: auto;
+
+    @include mixins.full-pantalla
+}
+
+body {
+    overflow-x: hidden;
+    
+    @include mixins.full-pantalla
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-family: variables.$fuentePagina;
+    font-weight: 600;
+
+}
+
+.fuente__pagina {
+    font-family: variables.$fuentePagina;
+}
+
+ul {
+    a {
+        text-decoration: none;
+    }
+}
